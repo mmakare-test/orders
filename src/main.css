@@ -1,0 +1,76 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+  margin-bottom: 150px;
+  color: #5e5e5e;
+}
+
+nav {
+  display: flex;
+  height: 80px;
+  background-color: #efefef;
+}
+
+main {    
+  width: 768px;
+  margin: 0 auto;
+  margin-top: 36px;
+  padding: 0 24px;
+}
+
+a, a:visited, .btn-link {
+  color: #60cbff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover, .btn-link:hover {
+  color: #9fdefd;
+  text-decoration: none;
+}
+
+.btn {
+  border-radius: 2px;
+}
+
+.header {
+  flex-grow: 1;
+  align-self: center;
+  padding: 0 24px;
+  font-size: 24px;
+  color: #2acaff;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  margin-left: 0px;
+  padding-left: 0px;
+}
+
+.grid li {
+  display: flex;
+  line-height: 32px;
+  padding: 0 8px;
+}
+
+.grid li > *:not(:first-child) {
+  text-align: right;
+}
+
+.grid-header {    
+  border-bottom: 1px solid #c3c0c0;
+}
+
+.grid-data:nth-child(even) {
+  background-color: #f6f6f6; 
+}

@@ -1,0 +1,49 @@
+.products .grid li > * {
+  width: 25%;
+}
+
+.products .totals {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 75%;
+  margin-top: 32px;
+  border-top: 1px solid #c3c0c0;
+}
+
+.products .totals  button {
+  width: 130px;
+}
+
+.products label {
+  font-weight: normal;
+  display: block;
+}
+
+.products input[type=text], select {
+  min-width: 170px;
+}
+
+.add-product {
+  width: 60%;
+  border: 1px solid #c3c0c0;
+  padding: 16px;
+}
+
+.add-product-toggle {
+  display: flex;
+  padding: 8px 0;
+}
+
+.add-product-toggle > * {
+  padding-right: 16px;
+}
+
+.add-product-action {
+  padding-top: 16px;
+  text-align: right;
+}
+
+.add-product-action button{
+  width: 100px;
+}

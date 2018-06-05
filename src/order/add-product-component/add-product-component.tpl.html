@@ -1,0 +1,38 @@
+<div class="add-product">
+  <h4> Add item to the order</h4>
+  
+  <div class="add-product-toggle">
+    <label>
+      <input type="radio" ng-model="product.isNew" ng-value="false">
+      Existing product
+    </label><br/>
+    <label>
+      <input type="radio" ng-model="product.isNew" ng-value="true">
+      New product
+    </label>
+  </div>
+
+  <div class="add-product-fields" ng-if="product.isNew">
+    <label for="productName">Name:</label>
+    <input type="text" id="productName" ng-model="product.name" ng-required="true">
+    
+    <label for="productPrice">Price:</label>
+    <input type="text" id="productPrice" ng-model="product.price" ng-required="true">
+  </div>
+
+  <div ng-if="!product.isNew">
+    <label for="itemSelect">Select product:</label>
+    <select ngRequired="true" name="itemSelect" id="itemSelect" ng-model="$ctrl.$scope.product.id">
+      <option ng-repeat="product in $ctrl.productsCatalog" ng-value="product.id">{{product.name}}</option>
+    </select>
+  </div>
+
+  <label for="productQty">Quantity:</label>
+  <input type="text" id="productQty" ng-model="product.qty" ng-required="true">
+
+  <div class="add-product-action">
+    <button class="btn btn-link" ng-click="$ctrl.onCancel()">Cancel</button>
+    <button class="btn btn-success" ng-click="$ctrl.addProduct()">Add</button>
+  </div>
+
+</div>

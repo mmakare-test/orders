@@ -1,0 +1,20 @@
+<div class="orders">
+  <h2>Orders</h2>
+
+  <ul class="grid" ng-if="$ctrl.orders.length">
+      <li class="grid-header">
+          <div>Order ID</div>
+          <div>Date</div>
+          <div>Total</div>
+          <div></div>
+      </li>
+      <li class="grid-data" ng-repeat="order in $ctrl.orders">
+          <div>{{order.id}}</div>
+          <div>{{order.date}}</div>
+          <div>{{order.total | currency}}</div>
+          <div>
+            <a ui-sref="app.order({from: order.id})">Re-order</a>
+          </div>
+      </li>
+  </ul>
+</div>

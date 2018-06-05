@@ -1,0 +1,36 @@
+<div class="products">
+
+  <a ui-sref="app.orders">Back to orders</a>
+  <h2>New order (from previous order #<span ng-bind={{$ctrl.fromId}}></span>)</h2>
+  
+  <ul class="grid">
+      <li class="grid-header">
+          <div class='nname'>Name</div>
+          <div>Qty</div>
+          <div>Price</div>
+          <div>Total</div>
+      </li>
+      <li class="grid-data" ng-repeat="product in $ctrl.products"">
+          <div>{{product.name}}</div>
+          <div>{{product.qty}}</div>
+          <div>{{product.price | currency}}</div>
+          <div>{{product.price*product.qty | currency}}</div>
+      </li>
+  </ul>
+  
+  <button ng-if="!$ctrl.isAddingProduct" class="btn btn-link" ng-click="$ctrl.showAddProduct()">
+    + Add item
+  </button>
+  
+  <add-product ng-if="$ctrl.isAddingProduct" 
+    products-catalog="$ctrl.productsCatalog"
+    on-add="$ctrl.addProduct({product})"
+    on-cancel="$ctrl.cancelAddProduct()"></add-product>
+  
+  <div class="totals">
+    <h4 class="total">TOTAL: {{$ctrl.total | currency}}</h4>  
+    <button class="btn btn-success" ng-click="$ctrl.placeOrder()">
+      Place order
+    </button>
+  </div>
+</div>
