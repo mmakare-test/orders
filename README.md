@@ -1,7 +1,12 @@
 
 ## Info
 
-* Order list application
+** Order List application supports:
+- displaying a list of existing product orders
+- creating new orders from existing orders
+- adding items to new orders
+
+Data persistence is limited to runtime only.
 
 ## Getting started
 
