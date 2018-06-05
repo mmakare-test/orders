@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "assignment",
   "main": "src/app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmakare-test/orders.git"
+  },
   "scripts": {
     "start": "cross-env NODE_ENV=DEV webpack-dev-server",
     "build": "webpack --display-chunks --display-reasons --display-error-details --display-modules",
